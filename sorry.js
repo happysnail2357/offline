@@ -10,7 +10,7 @@ const app = express()
 // Serve static files (HTML, CSS, JS) in folder 'public'
 app.use(express.static('public'))
 
-app.get('/', (req, res) => {
+app.get('*', (req, res) => {
     res.sendFile('public/sorry.html', {root: __dirname})
 })
 
